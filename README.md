@@ -16,15 +16,35 @@
 
 **内容表**
 
-![1558876360996](F:/markdownPicture/assets/007rAy9hgy1g3f1rrg2drj30j504gt8v.jpg)
+| **方法**     | creatTableeContent |
+| ------------ | ------------------ |
+| Table   Name | fanssystem:content |
+| RowKey       | 用户ID_时间戳      |
+| ColumnFamily | info               |
+| ColumnLabel  | 内容               |
+| Version      | 1个版本            |
 
 **用户关系表**
 
-![1558876392750](F:/markdownPicture/assets/007rAy9hgy1g3f1svaoccj30j2058aac.jpg)
+| **方法**     | createTableRelations   |
+| ------------ | ---------------------- |
+| Table   Name | fanssystem:relations   |
+| RowKey       | 用户ID                 |
+| ColumnFamily | attends、fans          |
+| ColumnLabel  | 关注用户ID，粉丝用户ID |
+| ColumnValue  | 用户ID                 |
+| Version      | 1个版本                |
 
 **用户内容接收邮件表**
 
-![1558876454863](F:/markdownPicture/assets/007rAy9hgy1g3f1rrggmhj30j2056t8z.jpg)
+| **方法**     | createTableReceiveContentEmails  |
+| ------------ | -------------------------------- |
+| Table   Name | fanssystem:receive_content_email |
+| RowKey       | 用户ID                           |
+| ColumnFamily | info                             |
+| ColumnLabel  | 用户ID                           |
+| ColumnValue  | 取内容的RowKey                   |
+| Version      | 1000                             |
 
 ## 业务流程解析
 
